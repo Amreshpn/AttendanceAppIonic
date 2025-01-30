@@ -1,0 +1,12 @@
+ion-tab-bar {
+    background-color: currentcolor;
+}
+
+ion-tab-button:hover,
+ion-tab-button:active,
+ion-tab-button:focus {
+    color           : #3437E9;
+    /* Change this to the desired active color */
+    background-color: #e3e3e3;
+    /* Change this to the desired background color */
+}

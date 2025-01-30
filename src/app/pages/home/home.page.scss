@@ -1,0 +1,155 @@
+.profilecard {
+	padding-left  : 2%;
+	padding-right : 2%;
+	padding-top   : 3%;
+	padding-bottom: 3%;
+	border-radius : 10px;
+	background    : var(--Linear1, linear-gradient(135deg, #5D60EE 0%, #3437E9 100%));
+	margin-top    : 8%;
+}
+
+.markatendcard {
+	padding-left  : 2%;
+	padding-right : 2%;
+	padding-top   : 2%;
+	padding-bottom: 3%;
+	border-radius : 10px;
+	background    : #ebedee
+}
+
+// ion-label {
+// 	color      : #FFF;
+// 	font-size  : 20px;
+// 	font-style : normal;
+// 	font-weight: 400;
+// 	line-height: normal;
+// 	padding    : 15px
+// }
+
+.profiledetailscard {
+	align-self: center
+}
+
+.profiledetailscard ion-label {
+	color        : #FFF;
+	font-size    : 16px;
+	margin-top   : 10px;
+	margin-bottom: 10px;
+}
+
+ion-radio-group {
+	padding: 10px;
+	margin : 10px 0;
+}
+
+.ionrowradio {
+	display: flex;
+
+	text-align     : center;
+	text-align-last: start;
+	padding-left   : 3%;
+}
+
+.ioncolradio {
+	text-align: center;
+}
+
+ion-radio {
+	--border-color            : #3498db;
+	/* Change border color */
+	--background              : #3498db;
+	/* Change background color */
+	--inner-background-checked: #2980b9;
+	/* Change checked background color */
+	--color-checked           : #3437E9;
+	/* Change checked icon color */
+}
+
+.ionlabelradio {
+	font-size  : 14px;
+	color      : #333;
+	margin-left: 10px;
+}
+
+.markattendanceLable {
+	margin-left: 3%;
+	margin-top : 5%;
+	font-size  : large;
+	font-weight: 600;
+}
+
+.markattendanceLabls {
+	margin-left: 3%;
+	margin-top : 2%;
+	font-size  : large;
+	font-weight: 600;
+	color      : #0a0a0a;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	color      : #070707;
+	padding    : 2%;
+}
+
+.ionbutton {
+	float           : inline-end;
+	padding-right   : 3%;
+	--background    : rgba(69, 69, 69, 1);
+	--border-radius : 10px;
+	--padding-top   : 0;
+	--padding-bottom: 0;
+	--padding-start : 1.1em;
+	--padding-end   : 1.1em;
+	letter-spacing  : 0.08em;
+	text-transform  : uppercase
+}
+
+.ionbuttonal {
+
+	padding-right   : 3%;
+	--background    : rgba(69, 69, 69, 1);
+	--padding-top   : 0;
+	--padding-bottom: 0;
+	--padding-start : 1.1em;
+	--padding-end   : 1.1em;
+	letter-spacing  : 0.08em;
+	text-transform  : uppercase;
+	border-radius   : 15px;
+	height          : 45px;
+}
+
+.ionbuttonafl {
+
+	padding-right   : 3%;
+	padding-left    : 3%;
+	--background    : rgb(251, 250, 250);
+	--padding-top   : 0;
+	--padding-bottom: 0;
+	--padding-start : 1.1em;
+	--padding-end   : 1.1em;
+	letter-spacing  : 0.08em;
+	color           : #3437E9;
+	text-transform  : uppercase;
+	border          : solid #3437E9;
+	border-radius   : 15px;
+	height          : 45px;
+
+}
+
+.calendercard {
+	font-variant-caps: all-small-caps;
+	text-align-last  : center;
+}
+
+.calendercard h1,
+.calendercard h6 {
+	margin: 1px;
+}
+
+.seeall {
+	color               : #3437E9;
+	float               : inline-end;
+	padding-right       : 4%;
+	text-decoration-line: underline;
+}

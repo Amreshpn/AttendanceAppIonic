@@ -1,0 +1,7 @@
+{
+  "name": "BPHT Attendance",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,50 @@
+	+ 	emptracker
+		+	labs
+			+	[labid]
+				+	phlebos
+					+	[phleboid]
+						|-	isloggedin	:	number (true ? 1 : 0)
+						|-	isPuchedin	:	number (true ? 1 : 0)
+						|-	state		: 	number (inTrip ? [tripid] : 0)
+						+	lastloc	:	Direction
+							|-	createdAt	:	number
+							|-	latitude	:	number
+							|-	longitude	: 	number
+						+	punchins	: 	Directions []
+							+	[epochtime1]	: 	Direction
+								|-	createdAt	: 	number
+								|-	latitude	: 	number
+								|-	longitude	: 	number
+							+
+							.
+							.
+							.
+							n+	[epochtimen]	:	Direction
+								|-	createdAt	: 	number
+								|-	latitude	: 	number
+								|-	longitude	: 	number
+						+	punchouts	: 	Directions []
+							+	[epochtime1]	: 	Direction
+								|-	createdAt	: 	number
+								|-	latitude	: 	number
+								|-	longitude	: 	number
+							+
+							.
+							.
+							.
+							n+	[epochtimen]	:	Direction
+								|-	createdAt	: 	number
+								|-	latitude	: 	number
+								|-	longitude	: 	number
+						+	trips
+							+	[epochtime]
+								|-	name?		: 	string
+								|-	startedAt	: 	number
+								|-	endAt		: 	number
+								+	collections
+									+	[regid]	: 	Direction
+										|-	startedAt	: 	number
+										+collectedAt
+											|-	createdAt	: 	number
+											|-	latitude	:	number
+											|-	longitude	: 	number

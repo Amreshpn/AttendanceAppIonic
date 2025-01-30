@@ -1,0 +1,39 @@
+<ion-content class="ioncontent">
+    <ion-row style="text-align: center;">
+        <ion-col text-center>
+            <img style="padding-top:15%;padding-bottom: 15%;width:140px;" src="assets/AttendSure_logo.png" />
+        </ion-col>
+    </ion-row>
+
+    <ion-list class="listcontent">
+        <ion-label class="userlable">Username / Employe_Id</ion-label>
+        <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+            <ion-input type="text" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)"
+                [(ngModel)]="username" placeholder="Enter Your Username / Employe_Id" name="username">
+            </ion-input>
+            <ion-icon slot="start" [class.changeIconColor]="inputSelected" name="person"></ion-icon>
+        </ion-item>
+
+        <ion-label class="passwordlable">Password</ion-label>
+        <ion-item [class.focusclass]="passSelected" lines="none" class="input_border">
+            <ion-input (ionFocus)="changePassBorder(true)" (ionBlur)="changePassBorder(false)"
+                [type]="showpassword ? 'text' : 'password'" [(ngModel)]="password" placeholder="Password"
+                [name]="passwordtoggle">
+            </ion-input>
+            <ion-icon slot="start" [class.changeIconColor]="passSelected" name="lock-closed"></ion-icon>
+            <ion-icon *ngIf="password.length!=0" slot="end" name="{{passIconType}}" (click)="togglePassword()">
+            </ion-icon>
+        </ion-item>
+    </ion-list>
+
+    <ion-row class="forgotpassword" style="justify-content: flex-end; font-weight: bold;">
+        <ion-label (click)="forgetpassword()" style="align-items: center;">
+            Forgot Password?
+        </ion-label>
+    </ion-row>
+
+    <ion-button mode="ios" class="loginbutton" expand="block" color="primary" (click)="loginAction()">Log
+        In</ion-button>
+
+
+</ion-content>

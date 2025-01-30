@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Select location</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-x=false scroll-y=false>
+
+
+    <ion-row class="map-modal">
+        <ion-col class="address-label" size="9">
+            <ion-label id="p1">{{address}}</ion-label>
+        </ion-col>
+        <ion-col size="3" style="align-self: center;">
+            <ion-button (click)="selectPlace()">Select</ion-button>
+        </ion-col>
+    </ion-row>
+    <div id="map_canvas"></div>
+</ion-content>

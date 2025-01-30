@@ -1,0 +1,77 @@
+<ion-content>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Select work type</ion-label>
+  </ion-row>
+
+  <ion-radio-group>
+    <ion-row class="ionrowradio">
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfh"></ion-radio>
+        <ion-label class="ionlabelradio">Work From Home</ion-label>
+      </ion-col>
+
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfo" start></ion-radio>
+        <ion-label class="ionlabelradio">Work From Office</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
+  <ion-row class="markattendanceLable">
+    <ion-label>Select Location</ion-label>
+  </ion-row>
+  <ion-row class="locationselectrow">
+    <ion-col size="10" style="align-self: center;padding: 0%;margin: 0%;">
+      <span>
+        <ion-label *ngIf="(!(selectedAddress === undefined || selectedAddress === ''))"
+          style="align-self: center;padding: 0%;margin: 0%; text-align: center;width: 100%;">
+          {{selectedAddress}}
+        </ion-label>
+      </span>
+    </ion-col>
+    <ion-col size="2" (click)="selectLocationfromMap()" style="align-self: center;padding: 0%;margin: 0%;">
+      <img src="assets/locationanim.gif">
+    </ion-col>
+  </ion-row>
+  <ion-row class="markattendanceLables">
+    <ion-label>upload your picture</ion-label>
+  </ion-row>
+  <ion-card>
+
+    <img class="profile_avatar" width="180" height="180" src="{{logo}}" onError="this.src='assets/User1.png';"
+      alt="..." />
+    <ion-button class="fab_custom" shape="round" (click)="captureImage()">
+      <ion-icon style="color: #fafafa" slot="icon-only" name="camera"></ion-icon>
+    </ion-button>
+
+    <!-- <ion-input readonly style="text-align: center; padding-inline: initial; font-size: x-large;
+                    padding-top: inherit; color: rgb(56, 1, 12);" [(ngModel)]="name" type="text">
+    </ion-input> -->
+
+    <ion-row class="timeinout">
+      <ion-col style="padding: 0 2% 0 0">
+        <ion-button [disabled]="isPunchedIn" class="btnin" (click)="timeIn(1,'Your Time in Registered')"><b
+            style="color:#ffffff;">TIME IN</b></ion-button>
+      </ion-col>
+      <ion-col style="padding: 0 0 0 2%">
+        <ion-button [disabled]="isPunchedOut" class="btnout" (click)="timeIn(0,'Your Time Out Registered')"><b
+            style="color:#ffffff;">TIME OUT</b></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-row class="markattendanceLables">
+    <ion-label>Previous attendance record</ion-label>
+  </ion-row>
+  <ion-card class="profilecard">
+    <ion-row style="align-items: center;">
+      <ion-col size="4">
+        <img class="profile_avatars" src="{{ logo }}" onError="this.src='assets/User1.png';" alt="..." />
+      </ion-col>
+      <ion-col size="8" class="profiledetailscard">
+        <ion-label> <span>Work type :</span> Work From Home</ion-label><br><br>
+        <ion-label><span>Time In : </span> 10:00 Am</ion-label><br><br>
+        <ion-label><span>Time Out : </span> 07:05</ion-label><br>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

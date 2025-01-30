@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Select location</ion-title>
+  </ion-toolbar>
+  
+  <ion-searchbar style="background-color: #fff;" id="pace-input" [(ngModel)]="autocomplete.input" (ionInput)="UpdateSearchResults()" placeholder="Search for a place"  >
+  </ion-searchbar>
+  <ion-list >
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="SelectSearchResult(item)" >
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+</ion-header>
+<!-- <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="UpdateSearchResults()" placeholder="Search for a place"  (ionClear)="ClearAutocomplete()"></ion-searchbar> -->
+
+<!-- (click)=" GoTo()" -->
+
+
+<ion-content scroll-x=false scroll-y=false>
+  <!-- <p id="p1">Hello World!</p> -->
+ 
+  <!-- <div style="width: 100%"><input style="width:100%; height:50px; background-color: white;" id="pace-input" class="controls" type="text" placeholder="Enter address for search"></div> -->
+  <ion-row class="map-modal">
+    <ion-col class="address-label" size="9">
+      <ion-label id="p1" >{{address}}</ion-label>
+      <ion-input style="border: inset;" placeholder="Add instructions" [(ngModel)]="addressinstruction"> <ion-icon style="color: red;" name="pin-outline"></ion-icon></ion-input>
+    </ion-col>
+    <ion-col size="3" style="align-self: center;">
+      <ion-button (click)="selectPlace()" >Select</ion-button>
+    </ion-col>
+  </ion-row>
+<div id="map">
+</div>
+
+</ion-content>

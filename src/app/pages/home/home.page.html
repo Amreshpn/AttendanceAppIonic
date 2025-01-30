@@ -1,0 +1,92 @@
+<ion-content class="ioncontent">
+  <ion-card class="profilecard">
+    <ion-row style="align-items: center;">
+      <ion-col size="4">
+        <img class="profile_avatar" src="{{ logo }}" onError="this.src='assets/User1.png';" alt="..." />
+      </ion-col>
+      <ion-col size="8" class="profiledetailscard">
+        <ion-label>Amresh Pandit</ion-label><br><br>
+        <ion-label>Emp Id : 01015</ion-label><br><br>
+        <ion-label>Dept Name : IT</ion-label><br><br>
+        <ion-label>Job Role : App Developer</ion-label>
+
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Attendance Regularization</ion-label>
+  </ion-row>
+
+  <!-- <ion-radio-group>
+    <ion-row class="ionrowradio">
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfh"></ion-radio>
+        <ion-label class="ionlabelradio">Work From Home</ion-label>
+      </ion-col>
+
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfo" start></ion-radio>
+        <ion-label class="ionlabelradio">Work From Office</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group> -->
+
+  <ion-card class="markatendcard">
+
+    <!-- <ion-label class="markattendanceLabls">Attendance Regularization</ion-label> -->
+    <h5>
+      <p>
+        If you missed any attendance
+        punch in or punch out,
+        please tap here</p>
+    </h5>
+    <ion-button expand="block" class="ionbutton" (click)="navigatetoattendanceregularization()"> Click Here
+    </ion-button>
+  </ion-card>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Apply Leave</ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="ionbuttonal" expand="block" (click)="navigatetoleavedashboardpage()"> Fill Form </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" class="ionbuttonafl" (click)="checkAvailableLeaves()">Available Leaves</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Upcoming Holydays</ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Mon</h6>
+        <h1 style="color: #3437E9;">25</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Christmas</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Mat</h6>
+        <h1 style="color: #3437E9;">30</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Saturday</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Sun</h6>
+        <h1 style="color: #3437E9;">31</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Sunday</h6>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+  <ion-label class="seeall">See All</ion-label>
+
+</ion-content>

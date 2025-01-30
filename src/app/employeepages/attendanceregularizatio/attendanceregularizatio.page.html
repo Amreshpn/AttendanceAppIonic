@@ -1,0 +1,70 @@
+<ion-content>
+  <ion-row class="markattendanceLable">
+    <ion-label>If you missed any attendance punch-in or punch-out, then you can mark your attendance within 15 days.
+      Don't Worry just do it....😁😊</ion-label>
+  </ion-row>
+  <br><br>
+
+  <ion-radio-group>
+    <ion-row class="ionrowradio">
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfh"></ion-radio>
+        <ion-label class="ionlabelradio">Work From Home</ion-label>
+      </ion-col>
+
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfo" start></ion-radio>
+        <ion-label class="ionlabelradio">Work From Office</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
+
+  <ion-radio-group>
+    <ion-row class="ionrowradio">
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfh"></ion-radio>
+        <ion-label class="ionlabelradio">Time In</ion-label>
+      </ion-col>
+
+      <ion-col size-6 class="ioncolradio">
+        <ion-radio value="wfo" start></ion-radio>
+        <ion-label class="ionlabelradio">Time Out</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-radio-group>
+
+  <ion-list>
+    <ion-label>Enter Name</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+
+      <ion-input type="text" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)"
+        [(ngModel)]="name" placeholder="Name" name="name" [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+
+    <ion-label>Employee Id</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input type="text" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+            employeeid" name="employeeid" placeholder="AMRDwf4567" [ngModelOptions]="{standalone: true}"
+        required></ion-input>
+    </ion-item>
+    <ion-label>Date of Missed Punch In/Out</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-datetime displayFormat="YYYY/MM/DD" pickerFormat="YYYY/MM/DD" [(ngModel)]="applyDate"
+        placeholder="YYYY/MM/DD">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-row class="markattendanceLablesd">
+    <h6>**Please note that you can only regularize your attendance twice a month** 😮😌</h6>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button class="canclebutton" expand="full" (click)="cancelbtn()">Cancel</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="subbmitbutton" expand="full" type="submit" (click)="submitbtn()">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

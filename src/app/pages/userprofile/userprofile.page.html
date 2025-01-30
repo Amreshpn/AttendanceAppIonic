@@ -1,0 +1,72 @@
+<ion-content>
+
+    <!-- <img (click)="viewImage()" class="profile_avatar" width="200" height="200" src="{{logo}}"
+        onError="this.src='assets/User1.png';" alt="..." />
+    <ion-item>
+        <ion-label>Employe Name : </ion-label>
+        <ion-input type="text" [(ngModel)]="name" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>DOB</ion-label>
+        <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="dob" (ngModelChange)="getAge(dob)"
+            readonly></ion-datetime>
+    </ion-item> -->
+    <ion-card>
+        <img (click)="viewImage()" class="profile_avatar" width="180" height="180" src="{{logo}}"
+            onError="this.src='assets/User1.png';" alt="..." />
+        <ion-card-header>
+            <ion-card-title>Company Name: {{ companyName }} Blue Pearl Health tech</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Employee Name : </ion-label>
+                <ion-text>{{ employeeName }} Amresh Kumar Pandit</ion-text>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Employee ID : </ion-label>
+                <ion-text>{{ employeeID }} 01015</ion-text>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Email ID : </ion-label>
+                <ion-text>{{ emailID }} amresh.pn@gmail.com</ion-text>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Department : </ion-label>
+                <ion-text>{{ department }} Development</ion-text>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Role : </ion-label>
+                <ion-text>{{ role }} Mobile Application Devloper</ion-text>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Dob : </ion-label>
+                <ion-text>{{ dob }} 10/07/1996</ion-text>
+            </ion-item>
+            <ion-item>
+                <ion-label>Age : </ion-label>
+                <ion-text>{{ age }} 27</ion-text>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender : </ion-label>
+                <ion-text>{{ gender }} Male</ion-text>
+            </ion-item>
+            <ion-item>
+                <ion-label>Date of joine : </ion-label>
+                <ion-text>{{ dateofjoine }} 18/02/2021</ion-text>
+            </ion-item>
+            <ion-item>
+                <ion-label>Date of leave : </ion-label>
+                <ion-text>{{ dateofleave }} ......🤔🤐</ion-text>
+            </ion-item>
+            <!-- Add other fields similarly -->
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,95 @@
+<ion-content>
+  <h3>You can apply Leave / Work From Home request form here..😊 </h3>
+
+  <ion-list>
+    <ion-label>Enter Name</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+
+      <ion-input type="text" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)"
+        [(ngModel)]="formData.name" placeholder="Name" name="name" [ngModelOptions]="{standalone: true}"
+        required></ion-input>
+    </ion-item>
+
+    <ion-label>Email Id</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input type="email" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+          formData.email" name="email" placeholder="abc@gmail.com" [ngModelOptions]="{standalone: true}"
+        required></ion-input>
+    </ion-item>
+
+    <ion-label>Apply Date</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <!-- <ion-input type="date" [(ngModel)]="formData.applyDate" name="applyDate" required></ion-input> -->
+      <ion-datetime displayFormat="YYYY/MM/DD" pickerFormat="YYYY/MM/DD" [(ngModel)]="formData.applyDate"
+        placeholder="YYYY/MM/DD">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-label position="">Days of Leave</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input type="number" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+          formData.leaveDates" name="leaveDates" placeholder="Input in number ex:- 2"
+        [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+
+    <ion-label>Days of Work From Home</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input type="number" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+          formData.daysWorkFromHome" name="daysWorkFromHome" [ngModelOptions]="{standalone: true}"
+        placeholder="Input in number ex:- 2" required></ion-input>
+    </ion-item>
+
+    <ion-label>Enter Subject</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input type="text" (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+          formData.subject" name="subject" placeholder="suject : leave/work form home"
+        [ngModelOptions]="{standalone: true}" required></ion-input>
+    </ion-item>
+
+    <ion-label>Reasons/Remarks</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-textarea (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" [(ngModel)]="
+          formData.reasons" name="reasons" placeholder="Reason in detail" [ngModelOptions]="{standalone: true}"
+        required></ion-textarea>
+    </ion-item>
+
+
+    <ion-label>Leave Dates</ion-label>
+    <ion-item [class.focusclass]="inputSelected" lines="none" class="input_border">
+      <ion-input (ionFocus)="changeInputBorder(true)" (ionBlur)="changeInputBorder(false)" type="text"
+        [(ngModel)]="formData.leaveDates" name="leaveDates" readonly [ngModelOptions]="{standalone: true}"
+        (click)="openDatePicker()" placeholder="YYYY/MM/DD" required></ion-input>
+    </ion-item>
+
+    <!-- <ion-list *ngIf="selectedDates.length > 0">
+        <ion-item *ngFor="let date of selectedDates">
+          {{ formatDate(date) }}
+        </ion-item>
+      </ion-list> -->
+
+    <ion-button class="addbtn" (click)="openDatePicker()">Add Dates +</ion-button>
+
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-label>Leave</ion-label>
+        <ion-checkbox style="margin-left: 30px;" [(ngModel)]="formData.leave" name="leave"></ion-checkbox>
+      </ion-col>
+      <ion-col size="6">
+        <ion-label>Work From Home</ion-label>
+        <ion-checkbox style="margin-left: 30px;" [(ngModel)]="formData.workFromHome" name="workFromHome"></ion-checkbox>
+      </ion-col>
+    </ion-row>
+
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button class="canclebutton" expand="full" (click)="cancelbtn()">Cancel</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="subbmitbutton" expand="full" type="submit" (click)="submitbtn()">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

@@ -1,0 +1,70 @@
+.markattendanceLable {
+    margin-left: 3%;
+    margin-top : 5%;
+    font-size  : large;
+    font-weight: 600;
+}
+
+.calendercard {
+    font-variant-caps: all-small-caps;
+    text-align-last  : center;
+}
+
+.calendercard h1,
+.calendercard h6 {
+    margin: 1px;
+}
+
+.seeall {
+    color               : #3437E9;
+    float               : inline-end;
+    padding-right       : 4%;
+    text-decoration-line: underline;
+}
+
+.requestcard {
+    text-align      : -webkit-center;
+    background-color: #3437E9;
+    padding-top     : 15px;
+    border-radius   : 15px;
+}
+
+ion-icon {
+    font-size: xx-large;
+    color    : #fff;
+}
+
+.h6 {
+    color     : #fff;
+    margin-top: 2%;
+}
+
+.leavestatuscard {
+    padding   : 3%;
+    background: aliceblue;
+}
+
+.h6subject {
+    font-weight: 700;
+}
+
+.psubject {
+    font-weight: 700;
+    font-size  : 15px;
+}
+
+span {
+    font-weight: 300;
+}
+
+p {
+    font-weight: 300;
+}
+
+.h6status {
+    color: #09a162;
+}
+
+.timespan {
+    float: inline-end;
+}

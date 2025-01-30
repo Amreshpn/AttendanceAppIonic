@@ -1,0 +1,81 @@
+<ion-content>
+  <ion-row class="markattendanceLable">
+    <ion-label>Attendance Regularization</ion-label>
+  </ion-row>
+
+  <ion-row class="requestrow">
+    <ion-col size="4" class="requestcol">
+      <ion-card class="requestcard" (click)="navigatetoLeavePage()">
+        <ion-icon name="desktop-outline"></ion-icon>
+        <h6 class="h6">Request <br> form</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="requestcol">
+      <ion-card class="requestcard">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <h6 class="h6">Available <br> Leaves</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="requestcol" (click)="navigatetoLeavePage()">
+      <ion-card class="requestcard">
+        <ion-icon name="home-sharp"></ion-icon>
+        <h6 class="h6">WFH <br> Request</h6>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Previous Leaves</ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Mon</h6>
+        <h1 style="color: #3437E9;">25</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Christmas</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Mat</h6>
+        <h1 style="color: #3437E9;">30</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Saturday</h6>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="calendercard">
+        <h6 style="color: #3437E9;">Sun</h6>
+        <h1 style="color: #3437E9;">31</h1>
+        <h6 style="color: #3437E9;">Dec</h6>
+        <h6>Sunday</h6>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+  <ion-label class="seeall">See All</ion-label>
+
+  <ion-row class="markattendanceLable">
+    <ion-label>Previous Leaves</ion-label>
+  </ion-row>
+
+  <ion-card class="leavestatuscard">
+    <h6 class="h6subject">Subject - <span>Mental Health Break:</span></h6>
+    <p class="psubject">Reason - <span>I have been experiencing increased stress and burnout, and I believe taking
+        [specific duration] off
+        will allow me to
+        recharge, prioritize my mental well-being, and return to work more focused and productive.</span>
+    </p>
+    <h6> <span class="h6status">Request Approved</span><span class="timespan">01 Dec 2023, 11:38 Am</span> </h6>
+  </ion-card>
+
+  <ion-card class="leavestatuscard">
+    <h6 class="h6subject">Subject - <span>MEducational Pursuits:</span></h6>
+    <p class="psubject">Reason - <span>I have been accepted into a short-term educational program that aligns with my
+        professional development goals. I am
+        requesting [specific duration] off to participate in this program and enhance my skills.</span>
+    </p>
+    <h6> <span class="h6status">Request Approved</span><span class="timespan">01 Dec 2023, 11:38 Am</span> </h6>
+  </ion-card>
+</ion-content>

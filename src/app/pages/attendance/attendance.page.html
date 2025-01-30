@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>Time In & Out</ion-label>
+    </ion-item>
+
+    <img class="profile_avatar" width="200" height="200" src="{{logo}}" onError="this.src='assets/blankuser.jpg';"
+      alt="..." />
+    <ion-button class="fab_custom" shape="round" color="light" (click)="captureImage()">
+      <ion-icon style="color: #3437E9" slot="icon-only" name="camera"></ion-icon>
+    </ion-button>
+
+    <ion-input readonly style="text-align: center; padding-inline: initial; font-size: x-large;
+                    padding-top: inherit; color: rgb(56, 1, 12);" [(ngModel)]="name" type="text">
+    </ion-input>
+    <!-- <ion-card> -->
+    <ion-row>
+      <ion-col size="2" (click)="selectLocationfromMap()" style="align-self: center;padding: 0%;margin: 0%;">
+        <img src="assets/i_location.png">
+      </ion-col>
+      <ion-col size="10" style="align-self: center;padding: 0%;margin: 0%;">
+        <span>
+          <ion-label *ngIf="(!(selectedAddress === undefined || selectedAddress === ''))"
+            style="align-self: center;padding: 0%;margin: 0%; text-align: center;width: 100%;">
+            {{selectedAddress}}
+          </ion-label>
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row style="background: #fff; margin: 0 2%; padding-top: 8%">
+      <ion-col style="padding: 0 2% 0 0">
+        <ion-button [disabled]="isPunchedIn" class="btn" (click)="timeIn(1,'Your Time in Registered')"><b
+            style="color:#ffffff;">TIME IN</b></ion-button>
+      </ion-col>
+      <ion-col style="padding: 0 0 0 2%">
+        <ion-button [disabled]="isPunchedOut" class="btn" (click)="timeIn(0,'Your Time Out Registered')"><b
+            style="color:#ffffff;">TIME OUT</b></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
